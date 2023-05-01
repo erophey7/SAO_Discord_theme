@@ -1,0 +1,163 @@
+/**
+ * @name SAO
+ * @author erophey7
+ * @authorId 864319086355415050
+ * @version 1.0.0
+ * @description Theme based on https://github.com/DiscordStyles/FrostedGlass
+ * @source 
+*/
+
+/*imports*/
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700&display=swap);
+@import url('https://discordstyles.github.io/FrostedGlass/dist/FrostedGlass.css');
+@import url('https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css');
+
+
+
+/*Color, background, font, etc, Settings*/
+:root {
+  --background-image: url('https://imgur.com/LW0uDxn.png');
+  --background-image-blur: 2px;
+  --background-image-size: cover;
+  --background-image-position: center;
+  --popout-modal-image: transparent;
+  --popout-modal-blur: 0px;
+  --popout-modal-size: 1;
+  --popout-modal-position: top center;
+  --home-button-size: cover;
+  --home-button-position: center;
+  --serverlist-brightness: 0.5;
+  --left-brightness: 0.5;
+  --middle-brightness: 0.5;
+  --right-brightness: 0;
+  --popout-modal-brightness: 0.5;
+  --gradient-primary: 254,146,32,0.4;
+  --gradient-secondary: 0,58,255,0.4;
+  --link-colour: #00B3FF;
+  --scrollbar-colour: rgb(255,221,156,0.32);
+  --gradient-direction: 320deg;
+  --tint-colour: 255,51,159;
+  --tint-brightness: 0;
+  --font: Raleway;
+  --home-button-image: url('https://i.picasion.com/sp/92/4b0o/0.gif');
+  --window-padding: 0px;
+  --window-roundness: 0px;
+  --update-notice-1: none;
+  --rs-small-spacing: 0px;
+  --rs-medium-spacing: 0px;
+  --rs-large-spacing: 0px;
+  --rs-small-width: 2.5px;
+  --rs-medium-width: 2.5px;
+  --rs-large-width: 2px;
+  --rs-avatar-shape: 50%;
+  --rs-online-color: #14DB80;
+  --rs-idle-color: #FFA002;
+  --rs-dnd-color: #FF1414;
+  --rs-offline-color: #464C53;
+  --rs-streaming-color: #642EC0;
+  --rs-phone-visible: block;
+}
+
+
+
+/*Top bar*/
+:root {
+  --TB-header-padding: 125px;
+}
+.platform-win .typeWindows-2-g3UY {
+  height: var(--TB-bar-height, 14px);
+  margin-top: 0;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background: transparent;
+}
+.platform-win .winButtonClose-3Q8ZH5 {
+  border-top-right-radius: var(--TB-tr-roundness);
+}
+.platform-win .winButton-3UMjdg {
+  position: relative;
+  top: calc(var(--TB-position-top, 0px) - 1px);
+  right: var(--TB-position-right, 0px);
+  height: var(--TB-height, 48px);
+  width: var(--TB-width, 40px);
+}
+.platform-win .winButton-3UMjdg:not(.winButtonClose-3Q8ZH5):hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.platform-win .container-ZMc96U {
+  padding-right: var(--TB-header-padding);
+}
+.platform-win .wordmarkWindows-2dq6rw {
+  display: none;
+}
+.platform-win #app-mount.bd-detached-editor .winButton-3UMjdg {
+  right: 30%;
+}
+.platform-win .closeButton-30b1gR {
+  right: unset;
+  left: 0;
+}
+.platform-win #app-mount .typeWindows-2-g3UY::before {
+  content: linear-gradient(#e66465, #9198e5);
+}
+
+/*Home button hover*/
+#app-mount .guilds-2JjMmN:hover .tutorialContainer-1pL9QS:hover .wrapper-3kah-n::before {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  background: url("https://media.tenor.com/CsAmEUubw-MAAAAC/sword-art.gif");
+  background-size: var(--home-button-size, cover);
+  background-position: var(--home-button-position, center);
+  background-repeat: var(--home-button-repeat, no-repeat);
+  height: 100%;
+  width: 100%;
+  transition: 0.2s ease;
+}
+
+
+/*Selected text color*/
+#app-mount .botTagInvert-18-95s {
+  color: #00328f8a;
+}
+
+::-moz-selection {
+  background: #00328f8a;
+  color: var(--text-normal);
+}
+
+::selection {
+  background: #00328f8a;
+  color: var(--text-normal);
+}
+
+
+
+/*Left bar discord buttons colors*/
+#app-mount .guilds-2JjMmN .listItemWrapper-3d87LP [class*=circleIconButton] {
+  background: var(--white);
+  color: #102fdd70;
+}
+
+#app-mount .guilds-2JjMmN:hover .listItemWrapper-3d87LP:hover [class*=circleIconButton] {
+  background: var(--white);
+  color: #ffa60038;
+}
+
+
+/*Left bar servers buttons colors*/
+#app-mount .guilds-2JjMmN .listItem-3SmSlK .wrapper-2PSQCG .svg-2ifYOU .wrapper-3kah-n {
+  background:#102fdd3a;
+}
+
+#app-mount .guilds-2JjMmN .listItem-3SmSlK .wrapper-2PSQCG:hover .svg-2ifYOU .wrapper-3kah-n {
+  background: #ffa6005e;
+}
+
+
+/*Ping Indicator Color*/
+#app-mount .base-2jDfDU .chat-2ZfjoI .content-1jQy2l .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3::before {
+  background:#ff00007a;
+}
